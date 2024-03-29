@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name=""/>
+
+    <group name="General">
+        <entry name="refresh" type="Int">
+            <default>300</default>
+        </entry>
+        <entry name="url" type="String">
+            <default>https://dot.kde.org/rss.xml</default>
+        </entry>
+        <entry name="headerColor" type="String">
+            <default>#4682b4</default>
+        </entry>
+        <entry name="listOpacity" type="Int">
+            <default>80</default>
+        </entry>
+    </group>
+        
+</kcfg>

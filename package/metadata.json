@@ -1,0 +1,25 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Jed Liu"
+      },
+      {
+        "Name": "Mircea Kitsune"
+      },
+      {
+        "Name": "Andreas Loos"
+      }
+    ],
+    "Category": "Online Services",
+    "Description": "RSS feed reader",
+    "Icon": "rss",
+    "Id": "com.github.liujed.rssfeeds",
+    "Name": "RSS feeds",
+    "Version": "0.4",
+    "License": "GPL2",
+    "Website": "https://github.com/liujed/plasma-applet-rss-feeds"
+  },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

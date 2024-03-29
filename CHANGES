@@ -1,0 +1,6 @@
+v0.4
+  * Ported Andreas Loos's version to Plasma 6.
+  * Incorporated some improvements from Mircea Kitsune.
+  * Fixed wrapping of titles.
+  * Improved theme support.
+  * Enriched the context menu.
