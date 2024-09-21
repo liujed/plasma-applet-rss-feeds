@@ -1,3 +1,7 @@
+v0.4.1
+  * Added option to use a non-animated loading indicator, to reduce power usage
+    on battery-powered systems.
+
 v0.4
   * Ported Andreas Loos's version to Plasma 6.
   * Incorporated some improvements from Mircea Kitsune.

@@ -18,6 +18,9 @@
         <entry name="listOpacity" type="Int">
             <default>80</default>
         </entry>
+        <entry name="animateBusyIndicator" type="Bool">
+            <default>true</default>
+        </entry>
     </group>
         
 </kcfg>

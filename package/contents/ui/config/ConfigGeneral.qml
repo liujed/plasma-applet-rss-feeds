@@ -8,6 +8,7 @@ Item {
   property alias cfg_url: url.text
   property alias cfg_headerColor: headerColorDialog.selectedColor
   property alias cfg_listOpacity: listOpacity.value
+  property alias cfg_animateBusyIndicator: animateBusyIndicator.checked
 
   GridLayout {
     id: generalConfig
@@ -35,7 +36,7 @@ Item {
     }
 
     Text {
-      text: "Header Color"
+      text: "Header colour"
     }
     Rectangle {
       id: headerColor
@@ -83,6 +84,13 @@ Item {
       valueFromText: function(value, locale) {
         return Math.round(Number.fromLocaleString(locale, text) * decimalFactor)
       }
+    }
+
+    Text {
+    }
+    CheckBox {
+      id: animateBusyIndicator
+      text: "Use loading animation"
     }
   }
 

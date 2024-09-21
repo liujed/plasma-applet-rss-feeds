@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQml.XmlListModel
 import QtQuick.Controls
 
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
@@ -46,7 +47,7 @@ Item {
     XmlListModelRole { name: "description"; elementName: "description" }
     XmlListModelRole { name: "link"; elementName: "link" }
 
-    onStatusChanged: busyIndicator.running = true
+    onStatusChanged: busyIndicator.isBusy = true
   }
 
   Component {
@@ -55,7 +56,7 @@ Item {
       height: layout.height
       width: thefeed.width
       color: PlasmaCore.Theme.viewBackgroundColor
-      Component.onCompleted: busyIndicator.running = false
+      Component.onCompleted: busyIndicator.isBusy = false
 
       Item {
         height: layout.height
@@ -165,10 +166,34 @@ Item {
     snapMode: ListView.SnapToItem
   }
 
-  BusyIndicator {
+  Item {
     id: busyIndicator
-    running: true
+    property bool isBusy: true
+    property var animate: plasmoid.configuration.animateBusyIndicator
+
+    onAnimateChanged: updateIndicator()
+    onIsBusyChanged: updateIndicator()
+
     anchors.centerIn: parent
+
+    function updateIndicator() {
+      animated.running = isBusy && animate
+      icon.visible = isBusy && !animate
+    }
+
+    BusyIndicator {
+      id: animated
+      running: isBusy && animate
+      anchors.centerIn: parent
+    }
+
+    Kirigami.Icon {
+      id: icon
+      source: "view-refresh"
+      anchors.centerIn: parent
+      width: animated.width
+      height: width
+    }
   }
 
   Timer {
