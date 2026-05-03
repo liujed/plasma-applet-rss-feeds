@@ -17,7 +17,7 @@
     "Icon": "rss",
     "Id": "com.github.liujed.rssfeeds",
     "Name": "RSS feeds",
-    "Version": "0.4.2",
+    "Version": "0.4.3",
     "License": "GPL2",
     "Website": "https://github.com/liujed/plasma-applet-rss-feeds"
   },
