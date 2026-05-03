@@ -3,6 +3,8 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
 
+import org.kde.kirigami as Kirigami
+
 Item {
   property alias cfg_refresh: refresh.value
   property alias cfg_url: url.text
@@ -19,6 +21,7 @@ Item {
 
     Text {
       text: "Reload time (seconds)"
+      color: Kirigami.Theme.textColor
     }
     SpinBox {
       id: refresh
@@ -27,6 +30,7 @@ Item {
     }
     Text {
       text: "URL"
+      color: Kirigami.Theme.textColor
     }
     TextField {
       id: url
@@ -37,6 +41,7 @@ Item {
 
     Text {
       text: "Header colour"
+      color: Kirigami.Theme.textColor
     }
     Rectangle {
       id: headerColor
@@ -54,6 +59,7 @@ Item {
 
     Text {
       text: "Opacity"
+      color: Kirigami.Theme.textColor
     }
     SpinBox {
       id: listOpacity
