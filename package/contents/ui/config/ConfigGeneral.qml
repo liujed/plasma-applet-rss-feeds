@@ -102,7 +102,7 @@ Item {
 
   ColorDialog {
     id: headerColorDialog
-    title: "Please choose a header color"
+    title: "Please choose a header colour"
     selectedColor: "Steel Blue"
     onAccepted: headerColor.color = selectedColor
   }
