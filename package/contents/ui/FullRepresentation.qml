@@ -12,6 +12,7 @@ Item {
   height: 500
 
   property var url: plasmoid.configuration.url
+  property string feedTitle: plasmoid.configuration.title || ""
   property int refresh: 1000 * plasmoid.configuration.refresh
   property var headerColor: plasmoid.configuration.headerColor
   property var listOpacity: plasmoid.configuration.listOpacity
@@ -128,7 +129,7 @@ Item {
           width: thefeed.width
           height: 8
           font.pixelSize: 9
-          text: url
+          text: feedTitle.trim() === "" ? url : feedTitle
           color: headerColor
         }
 
