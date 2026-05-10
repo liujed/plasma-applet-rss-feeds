@@ -163,7 +163,6 @@ Item {
     delegate: feedDelegate
     header: header
     footer: footer
-    snapMode: ListView.SnapToItem
   }
 
   Item {
