@@ -8,6 +8,7 @@ import org.kde.kirigami as Kirigami
 Item {
   property alias cfg_refresh: refresh.value
   property alias cfg_url: url.text
+  property alias cfg_title: title.text
   property alias cfg_headerColor: headerColorDialog.selectedColor
   property alias cfg_listOpacity: listOpacity.value
   property alias cfg_animateBusyIndicator: animateBusyIndicator.checked
@@ -37,6 +38,16 @@ Item {
       Layout.fillWidth: true
       Layout.minimumWidth: 400
       placeholderText: "http://www.faz.net/rss/aktuell/"
+    }
+    Text {
+      text: "Title"
+      color: Kirigami.Theme.textColor
+    }
+    TextField {
+      id: title
+      Layout.fillWidth: true
+      Layout.minimumWidth: 400
+      placeholderText: "Optional title shown above the feed"
     }
 
     Text {

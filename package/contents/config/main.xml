@@ -12,6 +12,9 @@
         <entry name="url" type="String">
             <default>https://dot.kde.org/rss.xml</default>
         </entry>
+        <entry name="title" type="String">
+            <default></default>
+        </entry>
         <entry name="headerColor" type="String">
             <default>#4682b4</default>
         </entry>
